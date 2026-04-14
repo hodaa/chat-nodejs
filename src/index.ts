@@ -46,5 +46,5 @@ wss.on('connection', client => {
 
 
 server.listen(process.argv[2] || 8000, () => {
-    console.log("Server is running on 8000");
+    console.log("Server is running on  port 8000");
 })
