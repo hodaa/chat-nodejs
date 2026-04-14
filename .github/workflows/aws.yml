@@ -18,4 +18,12 @@ jobs:
           script: |
             cd /home/ec2-user/chat-nodejs
             git pull origin main
+
+            echo "Installing dependencies..."
+            npm install
+
+            echo "Building project..."
+            npm run build
+
+            echo "Restarting app..."
             pm2 reload all || true
