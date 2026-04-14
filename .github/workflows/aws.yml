@@ -16,6 +16,6 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
           script: |
-            cd /home/ec2-user/REPO
+            cd /home/ec2-user/chat-nodejs
             git pull origin main
             pm2 reload all || true
