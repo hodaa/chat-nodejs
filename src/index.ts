@@ -25,7 +25,7 @@ wss.on('connection', client => {
     client.on('message', msg => {
         const message = msg.toString()
         console.log(message)
-        
+
         pub.publish('chat_message', message)
     })
 })
@@ -45,4 +45,6 @@ wss.on('connection', client => {
 // })
 
 
-server.listen(process.argv[2] || 8000)
+server.listen(process.argv[2] || 8000, () => {
+    console.log("Server is running on 8000");
+})
