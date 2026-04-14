@@ -8,7 +8,7 @@
  <input type="submit" value="Send"/>
 </form>
  <script>
-    const ws = new WebSocket(`ws://localhost:8000`)
+    const ws = new WebSocket(`ws://3.95.214.121:8000`)
     ws.onmessage = function (message) {
         const msgDiv = document.createElement('div')
         msgDiv.innerHTML = message.data
